@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+        #lienzo {
+            border: 1px red solid;
+        }
+
+        section {
+            width: 500px;
+            margin: auto;
+            height: 300px;
+
+        }
+    </style>
+    <script>
+        window.addEventListener("load", comenzar, false);
+        function comenzar() {
+            let elemento = document.getElementById("lienzo");
+            lienzo = elemento.getContext("2d");
+            // let degradado = lienzo.createLinearGradient(0, 0, 500, 600)
+            let degradado = lienzo.createRadialGradient(250, 150, 50, 250, 150, 300)
+            degradado.addColorStop(1, "#ff0000")
+            degradado.addColorStop(0, "#00ff00")
+            lienzo.fillStyle = degradado;
+            lienzo.fillRect(0, 0, 500, 500)
+
+
+
+
+
+            // lienzo.fillStyle = "green";
+            // lienzo.fillRect(40, 40, 90, 90)
+            // lienzo.strokeStyle = "red"
+            // lienzo.fillStyle = "blue";
+            // lienzo.globalAlpha = 0.5;
+            // lienzo.strokeRect(80, 80, 140, 140)
+            // lienzo.globalAlpha = 0.75;
+            // lienzo.fillRect(100, 100, 100, 100);
+            // lienzo.clearRect(120, 120, 60, 60)
+        }
+    </script>
+</head>
+<section>
+    <!-- <audio id="miaudio" controls>
+        <source src="(no hay cancion).mp3">
+        <source src="(no hay cancion).ogg">
+    </audio> -->
+    <canvas id="lienzo" width="500" height="500">
+        buscate un navegador mas mejon
+    </canvas>
+</section>
+
+<body>
+
+</body>
+
+</html>

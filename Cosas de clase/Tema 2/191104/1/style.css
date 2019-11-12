@@ -1,0 +1,20 @@
+html{
+    background-color: gray;
+}
+header{
+    background: url("img/header.jpg") no-repeat center;
+    height: 200px;
+}
+body{
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+}
+main{
+    padding: 20px;
+}
+img{
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}

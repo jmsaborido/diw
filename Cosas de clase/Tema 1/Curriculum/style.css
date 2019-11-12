@@ -1,0 +1,20 @@
+body{
+    margin: 0px;
+    padding: 0px;
+
+
+}
+header{
+    width: 100%;
+    background-color: lightslategray;
+    text-align: center;
+    padding-top:1em;
+    padding-bottom:1em;
+    color:white;
+
+}
+header img{
+    border-radius:100%;
+    width: 150px;
+
+}

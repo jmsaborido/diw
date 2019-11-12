@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulario</title>
+</head>
+
+<body>
+    <form method="get" id="mi_formulario">
+        <p>Nombre : <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre aqui"></p>
+        <p>Apellidos : <input type="text" name="apellidos" id="apellidos" title="Aqui va tu apellido"></p>
+        <p>Usuario : <input type="text" name="user" id="user" required></p>
+        <p>Contraseña: <input type="password" name="password" id="password" autofocus></p>
+        <p>Archivo: <input type="file" name="archivo" id="archivo" accept="image/*"></p>
+        <p><input type="email" name="email" id="email" multiple></p>
+        <p>C.Postal <input type="text" name="CP" id="CP" pattern="[0-9]{5}"></p>
+        <input type="datetime-local" name="fecha_y_hora" id="fecha">
+        <input type="button" value="No hago nada compadre">
+        <input type="reset" value="Reset">
+        <input type="submit" value="Enviar">
+    </form>
+    <input type="text" form="mi_formulario" name="texto" id="texto">
+
+
+</body>
+
+</html>

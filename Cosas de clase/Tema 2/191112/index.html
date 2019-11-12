@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #lienzo {
+            border: 1px solid #ff0000;
+        }
+    </style>
+    <script defer async>
+
+        function comenzar() {
+            var elemento = document.getElementById("lienzo")
+            lienzo = lienzo.getContext("2d");
+            lienzo.fillStyle = "#000000"
+            lienzo.moveTo(600, 50)
+            lienzo.bezierCurveTo(400, 200, 800, 300, 600, 450)
+            lienzo.arc(600, 250, 200, Math.PI / 2, Math.PI * 1.5, false)
+            lienzo.fill()
+            lienzo.arc(600, 250, 200, Math.PI * 1.5, Math.PI, false)
+            lienzo.stroke()
+            lienzo.beginPath()
+            lienzo.arc(620, 140, 40, 0, Math.PI * 2, false)
+            lienzo.fill()
+            lienzo.beginPath()
+            lienzo.fillStyle = "#ffffff"
+            lienzo.arc(560, 370, 40, 0, Math.PI * 2, false)
+            lienzo.fill()
+
+
+            lienzo.beginPath()
+            lienzo.fill()
+            lienzo.beginPath()
+            lienzo.fill()
+
+
+            // lienzo.font = "bold 24px verdana"
+
+            // lienzo.fillStyle = "#FF5713"
+            // lienzo.fillRect(400, 250, 300, 100)
+            // lienzo.globalCompositeOperation = "destination-atop" //over por encima la capa de abajo entera in= solo colorea la parte que esta encima de la capa de abajo, out deja la parte de atras y borra las letras
+            // lienzo.fillStyle = "#AAAAFF"
+            // lienzo.textAling = "center"
+            // lienzo.textBaseline = "middle"
+            // lienzo.fillText("Hola", 500, 300)
+
+
+
+
+            // lienzo.save();
+            // lienzo.fillText("Hola", 50, 20)
+            // lienzo.translate(100, 100)
+            // lienzo.rotate(Math.PI / 4)
+            // lienzo.scale(3, 3)
+            // lienzo.fillText("Hola", 50, 20)
+            // lienzo.restore()
+            // lienzo.save()
+            // lienzo.translate(200, 200)
+            // lienzo.rotate(Math.PI / 8)
+            // lienzo.scale(2, 2)
+            // lienzo.fillText("Hola", 50, 20)
+            // lienzo.restore()
+            // lienzo.fillText("hola", 20, 20)
+
+
+
+
+            // lienzo.fillText("Hola amigos", 50, 20)
+            // lienzo.translate(50, 50)
+            // lienzo.fillText("Hola amigos", 50, 20)
+            // lienzo.scale(3, 1)
+            // lienzo.rotate(Math.PI / 2)
+            // lienzo.transform(3, 1, 2, 3, 100, 100)
+            // lienzo.fillText("Hola amigos", 0, 0)
+            // lienzo.transform(1, 0, 0, 1, 0, 0)
+            // lienzo.fillText("Hola amigos", 50, 20)
+
+        }
+
+        window.addEventListener("load", comenzar, false);
+    </script>
+</head>
+
+<section>
+    <canvas id="lienzo" width="1200" height="900"></canvas>
+</section>
+
+<body gcolor="black">
+
+</body>
+
+</html>

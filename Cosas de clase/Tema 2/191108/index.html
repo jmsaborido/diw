@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #lienzo {
+            border: 1px solid #ff0000;
+
+        }
+    </style>
+    <script>
+        window.addEventListener("load", comenzar, false)
+        function comenzar() {
+            let elemento = document.getElementById("lienzo")
+            lienzo = elemento.getContext("2d")
+            // lienzo.beginPath();
+            // lienzo.moveTo(250, 100)
+            // lienzo.lineTo(375, 200)
+            // // lienzo.stroke()
+            // lienzo.lineTo(250, 200)
+            // // lienzo.stroke()
+            // lienzo.closePath();
+            // // lienzo.stroke()
+            // lienzo.clip()
+            // lienzo.beginPath()
+            // for (let i = 0; i < 300; i += 10) {
+            //     lienzo.moveTo(0, i)
+            //     lienzo.lineTo(500, i)
+            // }
+            // lienzo.stroke()
+            // // lienzo.fill()
+            lienzo.beginPath()
+            lienzo.arc(150, 100, 70, 0, 2 * Math.PI, false)
+            lienzo.stroke()
+
+        }
+    </script>
+</head>
+
+<section>
+    <canvas id="lienzo" width="500" height="300"></canvas>
+</section>
+
+<body>
+
+</body>
+
+</html>
