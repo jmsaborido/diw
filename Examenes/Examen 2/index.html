@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Examen práctico</title>
+    <script>
+        function comenzar() {
+            elemento = document.getElementById("lienzo");
+            lienzo = elemento.getContext("2d");
+            lienzo.beginPath();
+            lienzo.strokeStyle = "red";
+            lienzo.fillStyle = "red";
+            lienzo.arc(50, 30, 30, 0, Math.PI * 2, false);
+            lienzo.fill();
+            lienzo.beginPath();
+            lienzo.lineWidth = "10";
+            lienzo.lineCap = "round";
+            lienzo.moveTo(65, 45);
+            lienzo.lineTo(125, 105);
+            lienzo.stroke();
+            lienzo.beginPath();
+            lienzo.strokeStyle = "blue";
+            lienzo.fillStyle = "blue";
+            lienzo.arc(130, 30, 30, 0, Math.PI * 2, false);
+            lienzo.fill();
+            lienzo.beginPath();
+            lienzo.moveTo(115, 45);
+            lienzo.lineTo(55, 105);
+            lienzo.stroke();
+        }
+        window.addEventListener("load", comenzar, false);
+    </script>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <canvas id="lienzo" width="180" height="120">
+                Su navegador no soporta Canvas
+            </canvas>
+        </a>
+        <h1>LAS MARACAS</h1>
+    </header>
+    <nav id="banner">
+        <ul>
+            <li><a href="#">Instrumentos</a></li>
+            <li><a href="#">Accesorios</a></li>
+            <li><a href="#">Conócenos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="destacados">
+            <h2>Instrumentos destacados</h2>
+            <article class="instrumentos">
+                <h3>Guitarra</h3>
+                <img src="imagenes/guitarra.jpg" alt="Guitarra" />
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque necessitatibus, ipsam magnam iure,
+                    numquam harum earum asperiores culpa at consectetur repellendus aperiam animi. Rem quibusdam maiores
+                    assumenda illum facilis ad.</p>
+                <p><a href="#">Leer más...</a></p>
+            </article>
+            <article class="instrumentos">
+                <h3>Batería</h3>
+                <img src="imagenes/bateria.jpg" alt="Batería" />
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima culpa animi cum quidem consectetur
+                    debitis aliquid quam nihil. Optio, dolores sed! Itaque modi possimus officia dolorum doloremque
+                    error, dicta magni!. Est dolorem dolorum fugit ipsum harum blanditiis, pariatur distinctio aliquid
+                    excepturi, dignissimos eos, nemo dolore perferendis? Dolor qui eos autem sed neque.</p>
+                <p><a href="#">Leer más...</a></p>
+            </article>
+            <article class="instrumentos">
+                <h3>Saxofón</h3>
+                <img src="imagenes/saxofon.jpg" alt="Saxofón" />
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde repudiandae cumque soluta odit
+                    deserunt minima vitae consequatur, maxime totam eos iure! Consectetur nemo labore impedit delectus
+                    ut aliquid totam quas.</p>
+                <p><a href="#">Leer más...</a></p>
+            </article>
+            <aside id="lateral">
+                <h3>Las Maracas</h3>
+                <ul>
+                    <li><a href="#">Instrumentos</a></li>
+                    <li><a href="#">Accesorios</a></li>
+                    <li><a href="#">Conócenos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </aside>
+        </section>
+        <section id="noticias">
+            <h2>Noticias</h2>
+            <article>
+                <h3>Concierto</h3>
+                <img srcset="imagenes/conciertow240.jpg 240w,
+                imagenes/conciertow480.jpg 480w,
+                imagenes/conciertow800.jpg 800w" sizes="(max-width: 240px) 200px,
+                (max-width: 480px) 440px,
+                800px" src="imagenes/conciertow800.jpg" alt="Concierto">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis vitae ipsam dignissimos quas
+                    explicabo eius temporibus. Veniam minima quia molestiae accusamus itaque suscipit, dolores voluptate
+                    id modi quos pariatur facilis.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis assumenda modi voluptatem
+                    aliquid! Magnam quasi voluptates eum, perferendis maxime voluptas illo accusantium velit dignissimos
+                    delectus veniam aperiam quos, est libero.</p>
+                <p><a href="#">Leer más...</a></p>
+            </article>
+            <article>
+                <h3>Abiertas inscripciones para curso de piano</h3>
+                <img srcset="imagenes/pianow240.jpg 240w,
+                    imagenes/pianow480.jpg 480w,
+                    imagenes/pianow800.jpg 800w" sizes="(max-width: 240px) 200px,
+                    (max-width: 480px) 440px,
+                    800px" src="imagenes/pianow800.jpg" alt="Concierto">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis vitae ipsam dignissimos quas
+                    explicabo eius temporibus. Veniam minima quia molestiae accusamus itaque suscipit, dolores voluptate
+                    id modi quos pariatur facilis.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis assumenda modi voluptatem
+                    aliquid! Magnam quasi voluptates eum, perferendis maxime voluptas illo accusantium velit dignissimos
+                    delectus veniam aperiam quos, est libero.</p>
+                <p><a href="#">Leer más...</a></p>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <address>
+            <p>
+                José Reyes Gil Rubio<br />
+                C/ Una, 13 1º<br />
+                14450 Añora (Córdoba)
+            </p>
+        </address>
+        <small>
+            <p>
+                Las Maracas &copy; Copyright 2019<br />
+                IES Doñana (Sanlúcar de Barrameda - Cádiz)
+            </p>
+        </small>
+    </footer>
+</body>
+
+</html>

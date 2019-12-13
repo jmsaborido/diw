@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Examen práctico</title>
+    <script>
+        function comenzar() {
+            elemento = document.getElementById("lienzo");
+            lienzo = elemento.getContext("2d");
+            lienzo.beginPath();
+            lienzo.strokeStyle = "red";
+            lienzo.fillStyle = "red";
+            lienzo.arc(50, 30, 30, 0, Math.PI * 2, false);
+            lienzo.fill();
+            lienzo.beginPath();
+            lienzo.lineWidth = "10";
+            lienzo.lineCap = "round";
+            lienzo.moveTo(65, 45);
+            lienzo.lineTo(125, 105);
+            lienzo.stroke();
+            lienzo.beginPath();
+            lienzo.strokeStyle = "blue";
+            lienzo.fillStyle = "blue";
+            lienzo.arc(130, 30, 30, 0, Math.PI * 2, false);
+            lienzo.fill();
+            lienzo.beginPath();
+            lienzo.moveTo(115, 45);
+            lienzo.lineTo(55, 105);
+            lienzo.stroke();
+        }
+        window.addEventListener("load", comenzar, false);
+    </script>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <canvas id="lienzo" width="180" height="120">
+                Su navegador no soporta Canvas
+            </canvas>
+        </a>
+        <h1>LAS MARACAS</h1>
+    </header>
+    <nav id="banner">
+        <ul>
+            <li><a href="#">Instrumentos</a></li>
+            <li><a href="#">Accesorios</a></li>
+            <li><a href="#">Conócenos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="form">
+            <h2>Formulario</h2>
+            <form method="GET" autocomplete="off" id="miformulario">
+                <fieldset>
+                    <legend>Información personal</legend>
+                    <p><label>Nombre: <input type="text" title="Nombre" name="nombre" id="nombre"
+                                placeholder="Introduce tu nombre" required></label></p>
+                    <p><label>Apellidos: <input type="text" name="apellidos" id="apellidos"
+                                placeholder="Introduce tus apellidos" required></label></p>
+                    <p><label>Edad: <input type="number" name="edad" id="edad" min="0" max="100" required></label></p>
+                </fieldset>
+                <fieldset>
+                    <legend>Datos de contacto</legend>
+                    <p id="direccion"><label for="textarea">Dirección: </label><textarea id="textarea" cols="25"
+                            rows="3"></textarea></p>
+                    <p><label>Email: <input type="email" name="email" id="email" required></label></p>
+                    <p><label>Web: <input type="url" name="web" id="web"></label></p>
+                    <p><label>Teléfono: <input type="tel" name="telefono" id="telefono"></label></p>
+                </fieldset>
+                <p><input type="submit" id="suscribe" value="Enviar"></p>
+            </form>
+
+            <aside id="lateral">
+                <h3>Las Maracas</h3>
+                <ul>
+                    <li><a href="#">Instrumentos</a></li>
+                    <li><a href="#">Accesorios</a></li>
+                    <li><a href="#">Conócenos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </aside>
+        </section>
+    </main>
+    <footer>
+        <address>
+            <p>
+                José Reyes Gil Rubio<br />
+                C/ Una, 13 1º<br />
+                14450 Añora (Córdoba)
+            </p>
+        </address>
+        <small>
+            <p>
+                Las Maracas &copy; Copyright 2019<br />
+                IES Doñana (Sanlúcar de Barrameda - Cádiz)
+            </p>
+        </small>
+    </footer>
+</body>
+
+</html>

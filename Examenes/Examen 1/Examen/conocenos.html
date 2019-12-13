@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulario</title>
+</head>
+
+<body>
+    <main>
+        <section>
+            <h2>Formulario</h2>
+            <form method="GET" autocomplete="off" id="miformulario">
+                <fieldset>
+                    <legend>Indormacion personal</legend>
+                    <p>Nombre: <input type="text" name="nombre" id="nombre" placeholder="Introduce tu nombre" required>
+                    </p>
+                    <p>Apellidos:
+                        <input type="text" name="apellidos" id="apellidos" placeholder="Introduce tus apellidos"
+                            required>
+                    </p>
+                    <p>Edad: <input type="number" name="edad" id="edad" min="0" max="100"></p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Datos de contacto</legend>
+                    <p>Direccion: <textarea id="textarea" cols="25" rows="3"> </textarea> </p>
+                    <p>Email: <input type="email" name="email" id="email" required multiple></p>
+                    <p>Web: <input type="url" name="web" id="web"></p>
+                    <p>Telefono: <input type="text" pattern="[0-9]{9}"></p>
+
+                </fieldset>
+                <p><input type="submit" value="Enviar"></p>
+            </form>
+        </section>
+
+    </main>
+</body>
+
+</html>

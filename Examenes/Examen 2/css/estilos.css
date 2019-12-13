@@ -1,0 +1,187 @@
+@import url(reset.css);
+header {
+    background-image: url(../imagenes/cabecera.jpg);
+    padding: 1em;
+}
+
+h1 {
+    display: inline;
+    font-size: 6em;
+    text-align: justify;
+    color: grey;
+    margin: auto auto auto 3em;
+    text-shadow: 4px 4px 4px #000;
+}
+
+canvas {
+    display: inline-block;
+    height: 7.5em;
+    width: 7.5em;
+}
+
+h2 {
+    text-transform: uppercase;
+    background-color: grey;
+    font-size: 5em;
+    padding: 0.5em 0 0.5em 0;
+    text-align: center;
+}
+
+#banner {
+    padding: 1.5em 3em;
+    border: #000 dashed 1px;
+    margin-bottom: 0.5em;
+}
+
+#banner li {
+    margin: 0 1.5em;
+    display: inline-block;
+    padding-right: 2em;
+    padding-left: 2em;
+}
+
+li a {
+    background: grey url(../imagenes/clave_sol1.png) no-repeat left top;
+    margin-left: 1.75em;
+    font-size: 1.4em;
+    padding: 0.5em 0.5em 0.5em 2em;
+    border: black solid 1.5px;
+    border-radius: 25px;
+}
+
+li a:hover {
+    background-color: yellow;
+}
+
+aside {
+    float: right;
+}
+
+#destacados {
+    display: inline-block;
+    width: 100%;
+}
+
+.instrumentos {
+    margin: 0 1.5em;
+    padding-right: 2em;
+    padding-left: 2em;
+    width: 200px;
+    text-align: center;
+    display: block;
+    float: left;
+}
+
+.instrumentos img {
+    height: 15em;
+    width: 15em;
+    border: grey solid 1.5em;
+    outline: 3px solid black;
+}
+
+.instrumentos p {
+    font-size: 0.75em;
+    vertical-align: top;
+    text-align: center;
+    margin-top: 2em;
+}
+
+#destacados h3, #lateral h3 {
+    font-size: 2em;
+}
+
+#lateral li {
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+#noticias {
+    width: 100%;
+    margin-top: 1em;
+    text-align: center;
+    display: inline-block;
+}
+
+#noticias article {
+    margin: 2em;
+    display: inline-block;
+}
+
+#noticias img {
+    height: 10em;
+    width: 10em;
+    float: left;
+}
+
+#noticias p {
+    margin-left: 3pm;
+    text-align: center;
+}
+
+#noticias h3 {
+    font-size: 2em;
+    border-bottom: #000 dashed 2px;
+    text-align: left;
+}
+
+footer {
+    background-color: grey;
+    padding: 3em;
+    display: block;
+}
+
+footer address {
+    float: left;
+}
+
+footer small p {
+    float: right;
+}
+
+address p:first-line {
+    font-weight: bold;
+}
+
+input, textarea {
+    background-color: yellow;
+    width: 50em;
+}
+
+textarea {
+    width: 61em;
+}
+
+input:hover, textarea:hover {
+    background-color: olive;
+}
+
+input:focus, textarea:focus {
+    background-color: blue;
+}
+
+#form {
+    font-weight: bold;
+    width: 100%;
+    display: inline-block;
+}
+
+#form form {
+    float: left;
+    width: 80%;
+}
+
+fieldset p {
+    text-align: right;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+fieldset {
+    height: 10em;
+}
+
+#suscribe {
+    margin: 1em;
+    background-color: white;
+    width: 4em;
+}
