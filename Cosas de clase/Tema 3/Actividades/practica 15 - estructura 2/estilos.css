@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 20px;
+    border: 1px;
+}
+
+#logo {
+    width: 25%;
+    float: left;
+}
+
+#logo img {
+    width: 100%;
+}
+
+#cabecera {
+    width: 75%;
+    margin-left: 25%;
+}

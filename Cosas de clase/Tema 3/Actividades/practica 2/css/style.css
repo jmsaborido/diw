@@ -1,0 +1,80 @@
+/* .articulo{
+    color:green;
+}
+Innaccion de la herencia, los margin border y oaddin no se 
+p{
+    color: gray;
+    margin-left: 20px;
+    padding-left: 20px;
+    border-left: 12 solid blue;
+
+
+} */
+
+p{
+    font-size: 1em;
+    color: #666;
+    font-family: Arial,Arial, Helvetica, sans-serif;
+    text-align: justify;
+    margin-left: 100px;
+    margin-right: 40px;
+
+}
+
+section{
+    border-top: 2px solid #ef3e67;
+    padding-bottom: 12px;
+}
+h1,h2,h3{
+    color: #3bc1cd;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h1{
+    margin-left: 40px;
+    font-size: 2.2em;
+}
+h2{
+    margin-left: 60px;
+    font-size: 1.8em;
+}
+h3{
+    margin-left: 80px;
+    font-size: 1.4em;
+}
+.atencion{
+    color: #000;
+    border: 2px dashed #ef3e67;
+    background-color: #e8bec8;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.atencion strong{
+    color: #ef3e67;
+}
+
+#cuerpo{
+    background-color: #e8bec8;
+    background-image: url(../imagenes/fondo.jpg);
+    background-repeat: repeat-y;
+    background-position: center top;
+    width: 72.5%;
+    margin: 0 auto;
+}
+header img{
+    width: 100%;
+}
+footer{
+    border-top: 2px solid #ef3e67;
+    background-color: #666;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+h2+p{
+    color: #444;
+    font-size: 1.4em;
+    line-height: 120%;
+
+}

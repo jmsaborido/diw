@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #lienzo {
+            border: 1px solid #ff0000;
+        }
+    </style>
+    <script defer async>
+
+        window.addEventListener("load", () => {
+            var elemento = document.getElementById("lienzo")
+            lienzo = elemento.getContext("2d")
+            window.addEventListener("mousemove", (e) => {
+                var xdelraton = e.clientX;
+                var ydelraton = e.clientY;
+                var xcentro = 550;
+                var ycentro = 325;
+                var angulo = Math.atan2(xdelraton - xcentro, ydelraton - ycentro)
+                var x = xcentro + Math.round(Math.sin(angulo) * 10)
+                var y = ycentro + Math.round(Math.cos(angulo) * 10)
+                lienzo.clearRect(0, 0, 1200, 700)
+                lienzo.beginPath()
+                lienzo.arc(xcentro, ycentro, 20, 0, Math.PI * 2)
+                lienzo.moveTo(620, 325)
+                lienzo.arc(600, ycentro, 20, 0, Math.PI * 2)
+                lienzo.stroke();
+                lienzo.beginPath()
+                lienzo.arc(x, y, 10, 0, Math.PI * 2)
+                lienzo.moveTo(x, y)
+                lienzo.arc(x + 50, y, 10, 0, Math.PI * 2)
+                lienzo.fill()
+
+
+
+            })
+
+
+
+
+
+        });
+    </script>
+</head>
+
+<section>
+    <canvas id="lienzo" width="1200" height="700"></canvas>
+</section>
+
+<body>
+
+</body>
+
+</html>

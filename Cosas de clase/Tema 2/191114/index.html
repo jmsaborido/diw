@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #lienzo {
+            border: 1px solid #ff0000;
+        }
+    </style>
+    <script defer async>
+        var y = 50;
+        var superior = y;
+        var sub = true;
+        var horizontal = 1100;
+        var der = true;
+        var x = 50
+        window.addEventListener("load", () => {
+            elemento = document.getElementById("lienzo");
+            lienzo = elemento.getContext("2d")
+
+            setInterval(() => {
+                if (sub && y < 560 && der) {
+                    lienzo.clearRect(0, 0, 1200, 560)
+                    lienzo.beginPath()
+                    lienzo.arc(horizontal += 20, y += 20, 40, 0, Math.PI * 2, false);
+                    lienzo.fill()
+                }
+                if (y >= 550 || y <= superior) {
+                    sub = !sub;
+                    superior = !sub ? superior + 20 : superior
+                }
+                if (horizontal >= 1200 || horizontal <= 0) {
+                    der = !der
+                }
+                if (y >= superior && !(sub)) {
+                    lienzo.clearRect(0, 0, 1200, 560);
+                    lienzo.beginPath()
+                    lienzo.arc(horizontal, y -= 20, 40, 0, Math.PI * 2, false);
+                    lienzo.fill()
+                }
+                if (sub && y < 560 && !der) {
+                    lienzo.clearRect(0, 0, 1200, 560)
+                    lienzo.beginPath()
+                    lienzo.arc(horizontal -= 20, y += 20, 40, 0, Math.PI * 2, false);
+                    lienzo.fill()
+                }
+            }, 10)
+
+
+
+            // var imagen = new Image();
+            // imagen.src = "images.png"
+            // imagen.addEventListener("load", (e) => {
+            //     // lienzo.drawImage(imagen, 20, 20)
+            //     imagen = e.target;
+            //     lienzo.drawImage(imagen, 0, 0);
+            //     var infoImagen = lienzo.getImageData(10, 10, 300, 300)
+            //     var posicion;
+            //     for (let x = 0; x < 300; x++) {
+            //         for (let y = 0; y < 300; y++) {
+            //             posicion = (infoImagen.width * 4 * y) + (x * 4);
+            //             infoImagen.data[posicion] = 255 - infoImagen.data[posicion]
+            //             infoImagen.data[posicion + 1] = 255 - infoImagen.data[posicion + 1]
+            //             infoImagen.data[posicion + 2] = 255 - infoImagen.data[posicion + 2]
+            //         }
+            //     }
+            //     lienzo.putImageData(infoImagen, 500, 500)
+            // })
+
+        });
+    </script>
+</head>
+
+<section>
+    <canvas id="lienzo" width="1200" height="560"></canvas>
+</section>
+
+<body>
+
+</body>
+
+</html>
